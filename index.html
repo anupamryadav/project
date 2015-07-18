@@ -2,23 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-	
-    <link href="assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">   
+	<link href="assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
     <link href="assets/css/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
     <link href="assets/css/stream.css" media="screen" rel="stylesheet" type="text/css">
     <script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
-    <script src="dist/filter.js" type="text/javascript"></script>
+    <script src="assets/js/filter.js" type="text/javascript"></script>
     <script src="data/movies.js" type="text/javascript"></script>
     <script src="index.js" type="text/javascript"></script>
-	
-    <script src="assets/js/bootstrap.min.js"></script>
-   
+	<script src="assets/js/bootstrap-modal.js" type="text/javascript"></script>
+	<script  type="text/javascript" src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>	
+
   </head>
   <body>
-    <div class="container-fluid">
-      
-	  
+    <div class="container-fluid">      	
 	  <div class="row">
 	  
 	  
@@ -51,10 +50,11 @@
         <h2 id="mf23">Discover local restaurants in India that deliver to your doorstep</h2>
     </div>
 				<div class="col-md-4">
-				 <input type="password" class="form-control input-lg" id="pwd">
+<input type="text" class="form-control input-lg"" id="search" data-provide="typeahead1" data-items="4" />
+
 				 </div>
 				 <div class="col-md-4">				 
-			   <input type="password" class="form-control input-lg" id="pwd">
+<input type="text" class="form-control input-lg"" id="search1" data-provide="typeahead" data-items="4" />
 			   </div>
 			   <div class="col-md-4">
 			<button type="button" class="btn active btn-lg btn-block btn-success">
@@ -248,6 +248,7 @@
   </div >
 <!-- /.container -->
 
+
       <script id="movie-template" type="text/html">
         <div class="col-md-4 movie">
           <div class="thumbnail">
@@ -284,5 +285,18 @@
           </label>
         </div>
       </script>
+	  
+	  <script>
+ var subjects = ['PHP', 'MySQL', 'SQL', 'PostgreSQL', 'HTML', 'CSS', 'HTML5', 'CSS3', 'JSON'];
+
+$('#search').typeahead({source: subjects})
+
+</script>
+ <script>
+ 
+  var subjects1 = ['PHP', 'MySQL', 'SQL', 'PostgreSQL', 'HTML', 'CSS', 'HTML5', 'CSS3', 'JSON']; 
+
+$('#search1').typeahead({source: subjects1})
+</script>
     </body>
   </html>
