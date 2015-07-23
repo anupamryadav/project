@@ -1,7 +1,4 @@
-body{
 
-  font-family: "Open Sans", sans-serif;
-}
 
 h4, dd, .checkbox label{
   font-weight: 200;
@@ -223,11 +220,7 @@ padding-bottom : 100px;
 }
 .navbar-default
 {
-background-color :#eb5c32 !important;
-}
-.navbar
-{
-min-height :70px !important;
+background-color :#179ADF !important;
 }
 
 
